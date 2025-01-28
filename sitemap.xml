@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://blog.ethanhulse.com/</loc>
+    <lastmod>2025-01-27T19:19:13-07:00</lastmod>
+  </url><url>
+    <loc>https://blog.ethanhulse.com/about/</loc>
+    <lastmod>2025-01-27T19:17:28-07:00</lastmod>
+  </url><url>
+    <loc>https://blog.ethanhulse.com/authors/</loc>
+  </url><url>
+    <loc>https://blog.ethanhulse.com/categories/</loc>
+  </url><url>
+    <loc>https://blog.ethanhulse.com/series/</loc>
+  </url><url>
+    <loc>https://blog.ethanhulse.com/tags/</loc>
+  </url>
+</urlset>

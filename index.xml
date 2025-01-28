@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Codex</title>
+    <link>https://blog.ethanhulse.com/</link>
+    <description>Recent content on The Codex</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 27 Jan 2025 19:17:28 -0700</lastBuildDate>
+    <atom:link href="https://blog.ethanhulse.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>https://blog.ethanhulse.com/about/</link>
+      <pubDate>Mon, 27 Jan 2025 19:17:28 -0700</pubDate>
+      <guid>https://blog.ethanhulse.com/about/</guid>
+      <description>&lt;p&gt;Hi, my name is Ethan. I am a cybersecurity student and computing enthusiast. I use this site to document my writeups, code and projects.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
