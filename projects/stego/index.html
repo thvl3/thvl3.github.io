@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  steGO · The Codex
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Ethan Hulse">
+<meta name="description" content="A CLI LSB steganography tool written in Go">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="steGO">
+  <meta name="twitter:description" content="A CLI LSB steganography tool written in Go">
+
+<meta property="og:url" content="https://blog.ethanhulse.com/projects/stego/">
+  <meta property="og:site_name" content="The Codex">
+  <meta property="og:title" content="steGO">
+  <meta property="og:description" content="A CLI LSB steganography tool written in Go">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-01-27T20:05:25-07:00">
+    <meta property="article:modified_time" content="2025-01-27T20:05:25-07:00">
+
+
+
+
+<link rel="canonical" href="https://blog.ethanhulse.com/projects/stego/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.bb7a78bfb4e57aba6e78691ce9ad3fef35238fff2f55149e48bb3c43becd260c.css" integrity="sha256-u3p4v7TlerpueGkc6a0/7zUjj/8vVRSeSLs8Q77NJgw=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://blog.ethanhulse.com/">
+      The Codex
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Cyber Writeups</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://blog.ethanhulse.com/projects/stego/">
+          steGO
+        </a>
+      </h1>
+    </header>
+
+    <h2 id="overview">
+  Overview
+  <a class="heading-link" href="#overview">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><strong>steGO</strong> is a Go-based tool for performing steganography, the practice of hiding data within images. This project demonstrates how to encode and decode messages in PNG images using the least significant bit (LSB) technique.</p>
+<h2 id="features">
+  Features
+  <a class="heading-link" href="#features">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>Encode text messages into PNG images.</li>
+<li>Decode hidden messages from PNG images.</li>
+<li>Support for custom LSB bit manipulation.</li>
+<li>Lightweight and easy to use.</li>
+</ul>
+<h2 id="installation">
+  Installation
+  <a class="heading-link" href="#installation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>To install <strong>steGO</strong>, either:</p>
+<ul>
+<li>Download the relevant binary from the github releases page, make it executable and run via a CLI</li>
+<li>Clone the repository and build the project:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/thvl3/steGO.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> steGO
+</span></span><span class="line"><span class="cl">go build
+</span></span></code></pre></div><h2 id="usage">
+  Usage
+  <a class="heading-link" href="#usage">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="encoding-and-decoding">
+  Encoding and Decoding
+  <a class="heading-link" href="#encoding-and-decoding">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>To encode a message into an image:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">steGo encode &lt;original_png&gt; &lt;output_png_filename&gt; -file texttohide.txt
+</span></span></code></pre></div><p>To extrace a message from an image:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">steGo decode &lt;secret.png&gt;
+</span></span></code></pre></div><h2 id="about-the-project">
+  About the project
+  <a class="heading-link" href="#about-the-project">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>This program was built to be used as a fun example for a hands on lab I ran for my university&rsquo;s Cybersecurity Society.
+The project uses Go to embed binary data from text into the least significant bits of a PNG&rsquo;s red channel.</p>
+<h3 id="lsb">
+  LSB
+  <a class="heading-link" href="#lsb">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>In a PNG file, individual pixels are defined by 4 values: (R)ed, (G)reen, (B)lue, and (A)lpha.
+Each value can hold an integer value between 0 and 255.
+LSB steganography functions by replacing and storing data in the last bit of that value, where a single integer difference
+may not be noticeable to the naked eye. (<code>0x100011000</code> becomes <code>0x100011001</code>)
+This method allows us to hide data in these bits and have it remain relatvely unnoticed to the unobservant eye.</p>
+<h3 id="lsb-implementation-algorithm">
+  LSB Implementation Algorithm
+  <a class="heading-link" href="#lsb-implementation-algorithm">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I defined the function <code>hideMessage</code> to take the png image and text data converted to binary as parameters.
+I then defined the outer bounds of the message using the height and width of the image in pixels.
+From there I was able to iterate through the the pixels within these bounds and replace the last bit of every red pixel with a bit of data from my message.
+I then build a new image using the original green blue and alpha channels, along with the altered red channel.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">//Take png file and the binary version of our text message</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">hideMessage</span><span class="p">(</span><span class="nx">img</span> <span class="nx">image</span><span class="p">.</span><span class="nx">Image</span><span class="p">,</span> <span class="nx">messageBytes</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">)</span> <span class="o">*</span><span class="nx">image</span><span class="p">.</span><span class="nx">RGBA</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//define boundary by image size</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">bounds</span> <span class="o">:=</span> <span class="nx">img</span><span class="p">.</span><span class="nf">Bounds</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//make sure output image size matches initial</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">newImg</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewRGBA</span><span class="p">(</span><span class="nx">bounds</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">msgIndex</span> <span class="o">:=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">bitIndex</span> <span class="o">:=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//iterate through each pixel and the index of the message</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="nx">y</span> <span class="o">:=</span> <span class="nx">bounds</span><span class="p">.</span><span class="nx">Min</span><span class="p">.</span><span class="nx">Y</span><span class="p">;</span> <span class="nx">y</span> <span class="p">&lt;</span> <span class="nx">bounds</span><span class="p">.</span><span class="nx">Max</span><span class="p">.</span><span class="nx">Y</span><span class="p">;</span> <span class="nx">y</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="nx">x</span> <span class="o">:=</span> <span class="nx">bounds</span><span class="p">.</span><span class="nx">Min</span><span class="p">.</span><span class="nx">X</span><span class="p">;</span> <span class="nx">x</span> <span class="p">&lt;</span> <span class="nx">bounds</span><span class="p">.</span><span class="nx">Max</span><span class="p">.</span><span class="nx">X</span><span class="p">;</span> <span class="nx">x</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">originalColor</span> <span class="o">:=</span> <span class="nx">img</span><span class="p">.</span><span class="nf">At</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">r</span><span class="p">,</span> <span class="nx">g</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">a</span> <span class="o">:=</span> <span class="nx">originalColor</span><span class="p">.</span><span class="nf">RGBA</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">r</span><span class="p">,</span> <span class="nx">g</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="nx">r</span><span class="o">&gt;&gt;</span><span class="mi">8</span><span class="p">,</span> <span class="nx">g</span><span class="o">&gt;&gt;</span><span class="mi">8</span><span class="p">,</span> <span class="nx">b</span><span class="o">&gt;&gt;</span><span class="mi">8</span> <span class="c1">// Convert to 8-bit values</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">// Modify LSB of red channel to store message bits</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="nx">msgIndex</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">messageBytes</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">bit</span> <span class="o">:=</span> <span class="p">(</span><span class="nx">messageBytes</span><span class="p">[</span><span class="nx">msgIndex</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="p">(</span><span class="mi">7</span> <span class="o">-</span> <span class="nx">bitIndex</span><span class="p">))</span> <span class="o">&amp;</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">r</span> <span class="p">=</span> <span class="nb">uint32</span><span class="p">((</span><span class="nb">uint8</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFE</span><span class="p">)</span> <span class="p">|</span> <span class="nx">bit</span><span class="p">)</span> <span class="c1">// Fix: Explicit cast to uint8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="nx">bitIndex</span><span class="o">++</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="nx">bitIndex</span> <span class="o">==</span> <span class="mi">8</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">bitIndex</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">msgIndex</span><span class="o">++</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="nx">newImg</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">color</span><span class="p">.</span><span class="nx">RGBA</span><span class="p">{</span><span class="nb">uint8</span><span class="p">(</span><span class="nx">r</span><span class="p">),</span> <span class="nb">uint8</span><span class="p">(</span><span class="nx">g</span><span class="p">),</span> <span class="nb">uint8</span><span class="p">(</span><span class="nx">b</span><span class="p">),</span> <span class="nb">uint8</span><span class="p">(</span><span class="nx">a</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)})</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">newImg</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The original image vs the resulting image after encoding <code>&quot;Hello world&quot;</code> into a picture of a cat:</p>
+<p>Original:
+<img src="/static/images/stego/orange.png" alt="Original"></p>
+<p>Output:
+<img src="/static/images/stego/output.png" alt="Output"></p>
+<p>As you can probably tell, there is little if not any discernable visual difference between the images. However when we run the decode command on the output image:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./stego decode output.png
+</span></span></code></pre></div><p>We get:
+<code>Hidden message: Hello World&quot;</code></p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Ethan Hulse 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Codex</title>
-    <link>https://blog.ethanhulse.com/</link>
-    <description>Recent content on The Codex</description>
+    <title>Projects on The Codex</title>
+    <link>https://blog.ethanhulse.com/projects/</link>
+    <description>Recent content in Projects on The Codex</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 27 Jan 2025 20:05:25 -0700</lastBuildDate>
-    <atom:link href="https://blog.ethanhulse.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.ethanhulse.com/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>steGO</title>
       <link>https://blog.ethanhulse.com/projects/stego/</link>
       <pubDate>Mon, 27 Jan 2025 20:05:25 -0700</pubDate>
       <guid>https://blog.ethanhulse.com/projects/stego/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;&#xA;  Overview&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#overview&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;steGO&lt;/strong&gt; is a Go-based tool for performing steganography, the practice of hiding data within images. This project demonstrates how to encode and decode messages in PNG images using the least significant bit (LSB) technique.&lt;/p&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;&#xA;  Features&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#features&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Encode text messages into PNG images.&lt;/li&gt;&#xA;&lt;li&gt;Decode hidden messages from PNG images.&lt;/li&gt;&#xA;&lt;li&gt;Support for custom LSB bit manipulation.&lt;/li&gt;&#xA;&lt;li&gt;Lightweight and easy to use.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;installation&#34;&gt;&#xA;  Installation&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#installation&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;To install &lt;strong&gt;steGO&lt;/strong&gt;, either:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About Me</title>
-      <link>https://blog.ethanhulse.com/about/</link>
-      <pubDate>Mon, 27 Jan 2025 19:17:28 -0700</pubDate>
-      <guid>https://blog.ethanhulse.com/about/</guid>
-      <description>&lt;p&gt;Hi, my name is Ethan. I am a cybersecurity student and computing enthusiast. I use this site to document my writeups, code and projects.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
